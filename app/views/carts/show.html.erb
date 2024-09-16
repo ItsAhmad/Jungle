@@ -4,6 +4,12 @@
     <h1>My Cart</h1>
   </header>
 
+<% if enhanced_cart.empty? %>
+    <div class="alert alert-info">
+      <h2>Your cart is currently empty. Add at least one item to checkout.</h2>
+      <a href="<%= root_path %>">Back to home page</a>
+    </div>
+  <% else %>
   <div class="panel panel-default items">
     <table class="table table-bordered">
       <thead>
